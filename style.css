@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.logo{
+    font-size: 1.5em;
+    color: #fff;
+    user-select: none; /*tira a maozinha do link*/
+}
+
+.navigation a{
+    position:  relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';/*faz tudo funcionar*/
+    position: absolute;
+    left: 0;/*centraliza no Link ou tag a*/
+    bottom: -6px;/*joga a barra 6 px para baixo*/
+    width: 100%;/*determina o tamanho igual a escrita do link*/
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);/*esse é o inicio, quando o cursor nao está sobre o link*/
+    transition: transform .5s;
+    
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);/*aqui libera a animação dos codigos acima*/
+    color: #09a44fd0;
+}
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover{
+    background-color: #fff;
+    color: #162938;
+}
+
+.footer{
+    padding: 5px 10px;
+    background-color: blue;
+    color: #fff;align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.conteiner{
+    height: 100vh;
+    width: auto;
+    background-color: #162938;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form{
+    display: grid;
+    position: relative;
+    gap: 5px;
+    max-width: fit-content;
+    margin-inline: auto;
+    gap: 10px;
+    float: right;
+    margin-right: 20%;
+}
+
+label{
+    color: #fff;
+}
+
+
+form h2{
+    color: #fff;
+}
+
+
+.inp-contato{
+    border-radius: 5px;
+    height: 35px;
+}
+
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover{
+    background-color: #fff;
+    color: #162938;
+}
