@@ -155,3 +155,85 @@ form h2{
     background-color: #fff;
     color: #162938;
 }
+
+#container2{
+    background-color: #0A89A6;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#h_1{
+    background-color:#F2F2F2;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, .5);
+    width:85%;
+    height: 75%;
+}
+
+#monitor{
+height: 200px;
+border: 2px solid black;
+}    
+
+#h4{
+margin-left:20px;
+margin-right:20px;
+}
+
+#g{
+width:1366px;
+}
+
+#menu ul{
+    padding: 30px;
+    }
+    
+    #menu ul li{
+    display: inline;
+    }
+
+    #menu ul li a{
+    color: #000000;
+    padding: 1%;
+    display: inline;
+    text-decoration: none;
+    transition: background .3s;
+    margin-left: 10%;
+    }
+    
+    #menu ul li a:hover{
+    background-color: #4682B4;
+    opacity:0.5;
+    }
+    
+    /*menu2*/
+    
+    #menu2 ul{
+    padding: 30px;
+    }
+    
+    #menu2 ul li{
+    display: inline;
+    }
+
+    #menu2 ul li a{
+    padding: 1%;
+    display: inline;
+    text-decoration: none;
+    transition: background .3s;
+    margin-left: 10%;
+    }
+
+    #logo{
+        margin-top: 5px;
+        height: 20px;
+        }
+
+        #a{
+            width:80%;
+            float: left;
+            }
+            
+            #b{
+                width:20%;
+                float: left;
+            }
