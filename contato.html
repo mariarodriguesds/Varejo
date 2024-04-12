@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Conatate-nos por aqui | Varejos Atacatados</title>
+</head>
+<body>
+  <body>
+    <header>    
+        <nav class="navigation">
+          <span class="logo">
+              ATACATADOS
+          </span>
+            <a href="index.html">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Produtos</a>
+            <a href="#">Parceiros</a>
+            <a href="contato.html">Contato</a>
+            <button class="btnLogin-popup" onclick="Login()">Login</button>
+        </nav>
+        
+        <div class="menu-responsa">
+          <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-dark p-4">
+                <h5 class="text-white h4">ATACATADOS</h5>
+                <div>
+                  <div>
+                    <a href="index.html">Home</a>
+                  </div>
+                  <div>
+                    <a href="#">Sobre</a>
+                  </div>
+                  <div>
+                    <a href="#">Produtos</a>
+                  </div>
+                  <div>
+                    <a href="#">Parceiros</a> 
+                  </div>
+                  <a href="contato.html">Contato</a>
+                </div>
+               </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+          </div>
+        </div>
+    </header>
+
+      <div class="conteiner-contato">
+          <form name="form">
+            <div class="form">
+              <h2>Nos de seu Feedback!</h2>
+              <label for="">Nome:</label>
+              <input class="inp-contato" type="text" name="InpNome" placeholder="Coloque seu nome" id="InputNome">
+              <label for="">Email:</label>
+              <input class="inp-contato" type="email" name="InpEmail" placeholder="Coloque seu email" id="InputEmail">
+              <label for="">Telefone:</label>
+              <input class="inp-contato" type="text" name="InpContato" placeholder="Coloque seu telefone" id="InputFone">
+              <button onclick="Validar()">Enviar</button>
+            </div>
+          </form>
+      </div>
+    <footer class="footer">
+        Trabalho Acadêmico sem fins lucrativos <br> Victor Cordeiro e Maria Rodrigues 2024 &copyTodos os direitos reservados
+    </footer>
+    <!-- JavaScript (Opcional) -->
+   <script>
+      function Validar(){
+        var nome = document.getElementById("InputNome");
+        var email = document.getElementById("InputEmail");
+        var telefone = document.getElementById("InputFone");
+
+        if(nome.value === "" || email.value === "" || telefone.value === ""){
+          alert("Por favor, preencha todos os campos");
+          return false;
+        }
+      }
+
+   </script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+</body>
