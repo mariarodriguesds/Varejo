@@ -101,8 +101,9 @@ header {
 }
 
 .canteiner-prod{
-    height: 220vh;
+    height: auto;
     width: auto;
+    padding-bottom: 15px;
 }
 
 .produtos{
@@ -122,7 +123,6 @@ header {
     max-width: fit-content;
     margin: auto;
     padding: auto;
-    
 }
 
 .card{
