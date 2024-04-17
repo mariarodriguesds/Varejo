@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
 body{
@@ -14,16 +15,21 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 3;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
 }
 
 .logo{
-    font-size: 1.5em;
+    font-size: 2em;
     color: #fff;
+    padding-left: 10px;
     user-select: none; /*tira a maozinha do link*/
 }
 
@@ -31,6 +37,7 @@ header {
     position:  relative;
     font-size: 1.1em;
     color: #fff;
+    padding-left: 20px;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
@@ -48,7 +55,6 @@ header {
     transform-origin: right;
     transform: scaleX(0);/*esse é o inicio, quando o cursor nao está sobre o link*/
     transition: transform .5s;
-    
 }
 
 .navigation a:hover::after{
@@ -79,54 +85,166 @@ header {
 
 .footer{
     padding: 5px 10px;
-    background-color: blue;
+    width: 100%;
+    background-color: #343a40;
     color: #fff;align-items: center;
     text-align: center;
     padding: 10px;
 }
+/*Parte de PRODUTO*/
+.canteiner-prod{
+    background-color: bisque;
+    height: 80%;
+    width: 100%;
+    padding-right: 20px;
+    align-items: center;
+    align-content: center;
+}
 
-.conteiner{
-    height: 100vh;
+.container-fluid{
+    position: relative;
+}
+
+.canteiner-prod{
+    height: auto;
     width: auto;
-    background-color: #162938;
+    padding-bottom: 15px;
+}
+
+.produtos{
+    color: #000;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    margin-top: 55px;
+    text-align: center;
+    margin-left: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*button que coloca no carrinho*/  .para-carrinho{
+    background-color: transparent;
+
+}
+
+.org-prods{
     display: flex;
+    flex-wrap: wrap;
+    max-width: fit-content;
+    margin: auto;
+    padding: auto;
+}
+
+.card{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+/*Parte de CONTATO*/
+.conteiner{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #57F562;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-
+.conteiner-contato{
+    height: 100%;
+    width: 100%;
+    background-image: url(img/image_contato.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #57F562;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
 form{
-    display: grid;
+    display: flex;
     position: relative;
-    gap: 5px;
-    max-width: fit-content;
+    width: 70%;
+    height: 80%;
     margin-inline: auto;
-    gap: 10px;
-    float: right;
-    margin-right: 20%;
+    color: #fff;
+}
+
+.form{
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: 7.5%;
+    background-color: #fff;
+    backdrop-filter: blur;
+    color: #000;
+    border-radius: 3pc;
+    box-shadow: 0 0 0 7px rgba(0, 0, 0, .5);
 }
 
 label{
-    color: #fff;
+    color: #000000;
 }
-
 
 form h2{
-    color: #fff;
+    color: #000000;
 }
-
 
 .inp-contato{
-    border-radius: 5px;
-    height: 35px;
+    height: 25px;
+    width: auto;
+    background: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #000;    
+    margin-bottom: 10px;
 }
 
+.btn-contato{
+    margin-top: 5px;
+}
+
+/*Responsibilidade da página Contato*/
+
+/* Dispositivos small (telefones em modo paisagem com até 768px)*/
+@media (max-width: 914px) { 
+    .navigation{
+        display: none;
+    }
+    .meunu-responsa{
+        display: flex;
+        font-size: 1.5em;
+    }
+    .conteiner{
+        width: 100%;
+        align-items: center;
+    }
+    .conteiner .image-contato{
+        display: none;
+    }
+    form{
+        height: 90%;
+        width: auto;
+        padding: 10px;
+    }
+
+    .form{
+        box-shadow: none;
+    }
+    .form button{
+        height: 30px;
+    }
+
+ }
 
 .navigation .btnLogin-popup{
     width: 130px;
     height: 50px;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #140b0b;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
@@ -141,6 +259,7 @@ form h2{
     background-color: #fff;
     color: #162938;
 }
+/*Produtos Específicos*/
 
 #container2{
     background-color: #0A89A6;
@@ -193,4 +312,55 @@ width:100%;
 #b{
     width:20%;
     float: left;
+}
+
+
+/*Parte do CARRINHO*/
+.content{
+    height: auto;
+    width: auto;
+}
+
+main{
+    background-color: #fff;
+    padding: 0 30px;
+}
+
+main .page-title{
+    font-size: 40px;
+    padding: 50px 0px;
+    text-align: center;
+    color: #000;
+}
+
+.content{
+    display: flex;
+}
+
+.content section{
+    flex: 1;
+}
+
+aside{
+    background-color: red;
+    min-width: 250px;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead tr th{
+    text-align: left;
+}
+
+.table thead tr{
+    text-align: left;
+    border-bottom: #ccc;
+}
+
+.table thead th{
+    text-align: left;
+    padding-bottom: 10px;
 }
