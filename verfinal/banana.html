@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang = "pt-BR">
+	<head>
+		<title>Banana Nanica
+    </title>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "icon" type = "image/png" href="imagem/banaicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="script" href="javoscripto.js">
+
+	</head>
+	<body>
+		<div id="container2">
+			<div class="menu-responsa">
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h5 class="text-white h4">ATACATADOS</h5>
+                <div>
+                  <div>
+                    <a href="index.html">Home</a>
+                  </div>
+                  <div>
+                    <a href="sobre.html">Sobre</a>
+                  </div>
+                  <div>
+                    <a href="produtos.html">Produtos</a>
+                  </div>
+                  <div>
+                    <a href="contato.html">Contato</a> 
+                  </div>
+                  <a href="login.html">Login</a>
+                </div>
+                <div>
+                  <a href="carrinho.html">Carrinho</a>
+                </div>
+               </div>
+            </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+        <center>
+			    <br><br><br><br>
+			    <div id = "h_1"><br><br><br><h2> Banana Nanica </h2><br><br>
+            <div id = "imagem">
+			    <img src = "imagem/banana.png">
+        </div>
+			    <br><br><br>
+          <table width = "30%">
+            <tr>
+              <td><b>Nome:</b></td>
+              <td>Banana Nanica </td>
+            </tr>
+            <tr>
+              <td><b>Preço uni:</b></td>
+              <td>R$ 2,98</td>
+            </tr>
+            <tr>
+              <td><b>Fornecedor:</b></td>
+              <td>VM Hortifruti</td>
+            </tr>
+            <tr>
+              <td><b>Código:</b></td>
+              <td>3546</td>
+            </tr>
+            <tr>
+              <td><b>Peso aproximado uni:</b></td>
+              <td>110g</td>
+            </tr>
+          </table>
+          <br><br><br>
+          <div id = "texto4"><h4>Descrição</h4></div>
+          <br><br>
+          <div id = "desc">A banana nanica, também conhecida como banana d'água, é uma variedade de banana amplamente apreciada por sua doçura e textura cremosa. Originária do Brasil, essa fruta é facilmente reconhecida por sua casca amarela com manchas escuras características, que indicam seu amadurecimento. A banana nanica é famosa por sua polpa macia e suculenta, que derrete na boca ao ser consumida. Sua doçura natural é mais pronunciada do que em outras variedades de banana, tornando-a uma escolha popular para lanches rápidos, sobremesas e receitas de panificação. Além de seu sabor irresistível, a banana nanica é uma excelente fonte de nutrientes essenciais, como potássio, vitamina C e fibras dietéticas. O potássio presente na banana nanica desempenha um papel importante na regulação da pressão arterial e na saúde do coração, enquanto a vitamina C fortalece o sistema imunológico e as fibras auxiliam na digestão. Versátil e nutritiva, a banana nanica pode ser consumida crua, adicionada a smoothies, vitaminas e saladas de frutas, ou mesmo utilizada em receitas de bolos, pães e sobremesas. Seja como um lanche saudável ou um ingrediente delicioso em preparações culinárias, a banana nanica certamente agrada paladares de todas as idades com sua doçura única e sua textura cremosa e suculenta.
+          </div>
+          <br><br><br>
+              <div class="comprar-produto">
+                <form>
+                    <strong>Carrinho</strong>
+                    <label>Preço do Produto</label>
+                    <input type="text" name="" id="preco-produto" value="2,98" disabled>
+                    <label>Quantidade</label>
+                    <input type="number" name="" id="qnt-produto" min="0">
+                    <label>Preço Final</label>
+                    <input type="button" value="Calcular" id="btn-calcular" onclick="CalcularPreco()">
+                    <div class="preco-total" id="preco-total"></div>
+                    <button id="comprar" class="btn-comprar" onclick="VendaRealizada()">Comprar</button>
+                </form>
+              </div>
+
+          <br><br>
+		</div>
+    <br><br><br>
+    <a href = "#"><img src = "imagem/topo.png" id = "ancora"></a>
+  <footer class="footer">
+      Trabalho Acadêmico sem fins lucrativos <br> Victor Cordeiro e Maria Rodrigues 2024 &copyTodos os direitos reservados
+  </footer>
+
+   <script>
+    function CalcularPreco(){
+      var qnt = parseFloat(document.getElementById('qnt-produto').value);
+
+      var preco = 2.98;
+
+      var total = qnt * preco;
+
+      document.getElementById('preco-total').innerText = 'Total: R$ ' + total.toFixed(2);
+    }  
+
+    function VendaRealizada(){
+          alert("Venda Efetuada");
+    }
+   </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	</body>
+</html>
