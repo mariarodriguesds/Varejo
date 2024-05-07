@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang = "pt-BR">
+	<head>
+		<title>Abacaxi Perola</title>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "icon" type = "image/png" href="imagem/abacaicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="script" href="javoscripto.js">
+
+	</head>
+	<body>
+		<div id="container2">
+			<div class="menu-responsa">
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h5 class="text-white h4">ATACATADOS</h5>
+                <div>
+                  <div>
+                    <a href="index.html">Home</a>
+                  </div>
+                  <div>
+                    <a href="sobre.html">Sobre</a>
+                  </div>
+                  <div>
+                    <a href="produtos.html">Produtos</a>
+                  </div>
+                  <div>
+                    <a href="contato.html">Contato</a> 
+                  </div>
+                  <a href="login.html">Login</a>
+                </div>
+                <div>
+                  <a href="carrinho.html">Carrinho</a>
+                </div>
+               </div>
+            </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+        <center>
+			    <br><br><br><br>
+			    <div id = "h_1"><br><br><br><h2> Abacaxi Perola </h2><br><br>
+            <div id = "imagem">
+			    <img src = "imagem/abacaxi.png">
+        </div>
+			    <br><br><br>
+          <table width = "30%">
+            <tr>
+              <td><b>Nome:</b></td>
+              <td>Abacaxi Perola</td>
+            </tr>
+            <tr>
+              <td><b>Preço uni:</b></td>
+              <td>R$4,75</td>
+            </tr>
+            <tr>
+              <td><b>Fornecedor:</b></td>
+              <td>VM Hortifruti</td>
+            </tr>
+            <tr>
+              <td><b>Código:</b></td>
+              <td>4672</td>
+            </tr>
+            <tr>
+              <td><b>Peso aproximado uni:</b></td>
+              <td>1,3kg</td>
+            </tr>
+          </table>
+          <br><br><br>
+          <div id = "texto4"><h4>Descrição</h4></div>
+          <br><br>
+          <div id = "desc">O Abacaxi Pérola, uma das variedades mais apreciadas desta fruta tropical, cativa não apenas pelo seu sabor doce e refrescante, mas também pela sua aparência única e características distintas. A casca do Abacaxi Pérola é marcada por uma tonalidade dourada e textura áspera, que se transforma em uma rede de sulcos profundos ao longo da superfície. Essa casca protetora esconde uma polpa suculenta e amarelada, repleta de sucos doces e aromáticos, que oferecem uma explosão de frescor a cada mordida. Uma das características mais distintivas do Abacaxi Pérola é a sua doçura equilibrada, que é acompanhada por um toque sutil de acidez, conferindo-lhe um sabor vibrante e envolvente. Sua textura é macia e suculenta, tornando-o perfeito para ser consumido fresco, em fatias suculentas ou picado em saladas de frutas tropicais. Além do seu delicioso sabor e textura, o Abacaxi Pérola também é valorizado por sua versatilidade culinária. Ele pode ser usado em uma variedade de pratos, desde sobremesas como sorvetes e bolos até pratos salgados, como marinadas para carnes grelhadas ou como ingrediente principal em pratos agridoces. Cultivado em regiões tropicais ao redor do mundo, o Abacaxi Pérola é colhido no auge de sua maturação para garantir o máximo de sabor e frescor. Sua presença em mercados e feiras é sempre um convite irresistível para os amantes de frutas exóticas, oferecendo uma experiência sensorial única que desperta os sentidos e transporta os consumidores para os trópicos com cada pedaço suculento.
+          </div>
+          <br><br><br>
+              <div class="comprar-produto">
+                <form>
+                    <strong>Carrinho</strong>
+                    <label>Preço do Produto</label>
+                    <input type="text" name="" id="preco-produto" value="4,75" disabled>
+                    <label>Quantidade</label>
+                    <input type="number" name="" id="qnt-produto" min="0">
+                    <label>Preço Final</label>
+                    <input type="button" value="Calcular" id="btn-calcular" onclick="CalcularPreco()">
+                    <div class="preco-total" id="preco-total"></div>
+                    <button id="comprar" class="btn-comprar" onclick="VendaRealizada()">Comprar</button>
+                </form>
+              </div>
+
+          <br><br>
+		</div>
+    <br><br><br>
+    <a href = "#"><img src = "imagem/topo.png" id = "ancora"></a>
+  <footer class="footer">
+      Trabalho Acadêmico sem fins lucrativos <br> Victor Cordeiro e Maria Rodrigues 2024 &copyTodos os direitos reservados
+  </footer>
+
+   <script>
+    function CalcularPreco(){
+      var qnt = parseFloat(document.getElementById('qnt-produto').value);
+
+      var preco = 4.75;
+
+      var total = qnt * preco;
+
+      document.getElementById('preco-total').innerText = 'Total: R$ ' + total.toFixed(2);
+    }  
+
+    function VendaRealizada(){
+          alert("Venda Efetuada");
+    }
+   </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	</body>
+</html>
