@@ -78,23 +78,23 @@
           <br><br>
           <div id = "desc">O Abacaxi Pérola, uma das variedades mais apreciadas desta fruta tropical, cativa não apenas pelo seu sabor doce e refrescante, mas também pela sua aparência única e características distintas. A casca do Abacaxi Pérola é marcada por uma tonalidade dourada e textura áspera, que se transforma em uma rede de sulcos profundos ao longo da superfície. Essa casca protetora esconde uma polpa suculenta e amarelada, repleta de sucos doces e aromáticos, que oferecem uma explosão de frescor a cada mordida. Uma das características mais distintivas do Abacaxi Pérola é a sua doçura equilibrada, que é acompanhada por um toque sutil de acidez, conferindo-lhe um sabor vibrante e envolvente. Sua textura é macia e suculenta, tornando-o perfeito para ser consumido fresco, em fatias suculentas ou picado em saladas de frutas tropicais. Além do seu delicioso sabor e textura, o Abacaxi Pérola também é valorizado por sua versatilidade culinária. Ele pode ser usado em uma variedade de pratos, desde sobremesas como sorvetes e bolos até pratos salgados, como marinadas para carnes grelhadas ou como ingrediente principal em pratos agridoces. Cultivado em regiões tropicais ao redor do mundo, o Abacaxi Pérola é colhido no auge de sua maturação para garantir o máximo de sabor e frescor. Sua presença em mercados e feiras é sempre um convite irresistível para os amantes de frutas exóticas, oferecendo uma experiência sensorial única que desperta os sentidos e transporta os consumidores para os trópicos com cada pedaço suculento.
           </div>
-          <br><br><br>
-              <div class="comprar-produto">
-                <form>
-                    <strong>Carrinho</strong>
-                    <label>Preço do Produto</label>
-                    <input type="text" name="" id="preco-produto" value="4,75" disabled>
-                    <label>Quantidade</label>
-                    <input type="number" name="" id="qnt-produto" min="0">
-                    <label>Preço Final</label>
-                    <input type="button" value="Calcular" id="btn-calcular" onclick="CalcularPreco()">
-                    <div class="preco-total" id="preco-total"></div>
-                    <button id="comprar" class="btn-comprar" onclick="VendaRealizada()">Comprar</button>
-                </form>
-              </div>
-
           <br><br>
-		</div>
+  </div>
+  
+    <div class="comprar-produto">
+      <form>
+          <strong>Carrinho</strong>
+          <label>Preço do Produto</label>
+          <input type="text" name="" id="preco-produto" value="4,75" disabled>
+          <label>Quantidade</label>
+          <input type="number" name="" id="qnt-produto" min="1" value="1">
+          <label>Preço Final</label>
+          <input type="button" value="Calcular" id="btn-calcular" onclick="CalcularPreco()">
+          <div class="preco-total" id="preco-total"></div>
+          <button id="comprar" class="btn-comprar" onclick="VendaRealizada()">Comprar</button>
+      </form>
+    </div>
+
     <br><br><br>
     <a href = "#"><img src = "imagem/topo.png" id = "ancora"></a>
   <footer class="footer">
