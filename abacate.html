@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang = "pt-BR">
+	<head>
+		<title>Abacate</title>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel = "icon" type = "image/png" href="imagem/abaicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="script" href="javoscripto.js">
+
+	</head>
+	<body>
+		<div id="container2">
+			<div class="menu-responsa">
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h5 class="text-white h4">ATACATADOS</h5>
+                <div>
+                  <div>
+                    <a href="index.html">Home</a>
+                  </div>
+                  <div>
+                    <a href="sobre.html">Sobre</a>
+                  </div>
+                  <div>
+                    <a href="produtos.html">Produtos</a>
+                  </div>
+                  <div>
+                    <a href="contato.html">Contato</a> 
+                  </div>
+                  <a href="login.html">Login</a>
+                </div>
+               </div>
+            </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
+        <center>
+			    <br><br><br><br>
+			    <div id = "h_1"><br><br><br><h2> Abacate </h2><br><br>
+            <div id = "imagem">
+			    <img src = "imagem/abacate.png">
+        </div>
+			    <br><br><br>
+          <table width = "30%">
+            <tr>
+              <td><b>Nome:</b></td>
+              <td>Abacate</td>
+            </tr>
+            <tr>
+              <td><b>Preço uni:</b></td>
+              <td>R$3,79</td>
+            </tr>
+            <tr>
+              <td><b>Fornecedor:</b></td>
+              <td>VM Hortifruti</td>
+            </tr>
+            <tr>
+              <td><b>Código:</b></td>
+              <td>9867</td>
+            </tr>
+            <tr>
+              <td><b>Peso aproximado uni:</b></td>
+              <td>430g</td>
+            </tr>
+          </table>
+          <br><br><br>
+          <div id = "texto4"><h4>Descrição</h4></div>
+          <br><br>
+          <div id = "desc">O abacate, fruto originário da América Central e do Sul, é uma verdadeira maravilha da natureza. Com sua casca verde escura e rugosa, o abacate parece guardar segredos em seu interior. Ao cortá-lo, revela-se uma polpa cremosa, de cor verde-claro a amarelo-pálido, pontilhada por uma grande semente central. Sua textura é macia e untuosa, deslizando suavemente sobre a língua quando degustado.
+
+            O sabor do abacate é único e inconfundível, uma mistura equilibrada de cremosidade e leveza, com um toque sutilmente amanteigado. Seu aroma é suave e discreto, convidando os sentidos a explorar suas nuances.
+            
+            Nutricionalmente, o abacate é uma verdadeira potência. Rico em gorduras saudáveis, especialmente ácido oleico, é uma excelente fonte de energia e um aliado na promoção da saúde cardiovascular. Além disso, é repleto de fibras, vitaminas e minerais, como potássio, vitamina E e ácido fólico, oferecendo uma ampla gama de benefícios para o corpo humano.
+            
+            Versátil em suas aplicações culinárias, o abacate pode ser consumido de diversas formas: em saladas, sanduíches, molhos, smoothies, sobremesas e até mesmo como ingrediente principal em pratos quentes. Sua adaptabilidade permite que seja utilizado tanto em preparações doces quanto salgadas, adicionando uma dimensão única de sabor e textura a qualquer receita.
+            
+            Além de seu apelo gastronômico, o abacate também é reverenciado na indústria cosmética e de cuidados com a pele, graças às suas propriedades hidratantes e nutritivas. Óleos e cremes à base de abacate são amplamente utilizados para promover a saúde e a beleza da pele e dos cabelos.
+            
+            Em suma, o abacate é muito mais do que apenas uma fruta – é um tesouro da natureza, que encanta não apenas pelo seu sabor e textura exuberantes, mas também pelos inúmeros benefícios que oferece à saúde e ao bem-estar.</div>
+          <br><br><br>
+          <br><br>
+    </div>
+    <br><br>
+    </div>
+    <div class="comprar-produto">
+      <form>
+          <strong>Carrinho</strong>
+          <label>Preço do Produto</label>
+          <input type="text" name="" id="preco-produto" value="3.79" disabled>
+          <label>Quantidade</label>
+          <input type="number" name="" id="qnt-produto" min="1" value="1">
+          <label>Preço Final</label>
+          <input type="button" value="Calcular" id="btn-calcular" onclick="CalcularPreco()">
+          <div class="preco-total" id="preco-total"></div>
+          <button id="comprar" class="btn-comprar" onclick="VendaRealizada()">Comprar</button>
+      </form>
+    </div>
+    <br><br><br>
+    <a href = "#"><img src = "imagem/topo.png" id = "ancora"></a>
+  <footer class="footer">
+      Trabalho Acadêmico sem fins lucrativos <br> Victor Cordeiro e Maria Rodrigues 2024 &copyTodos os direitos reservados
+  </footer>
+
+   <script>
+    function CalcularPreco(){
+      var qnt = parseFloat(document.getElementById('qnt-produto').value);
+
+      var preco = 3.79;
+
+      var total = qnt * preco;
+
+      document.getElementById('preco-total').innerText = 'Total: R$ ' + total.toFixed(2);
+    }  
+
+    function VendaRealizada(){
+          alert("Venda Efetuada");
+    }
+   </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	</body>
+</html>
